@@ -1,4 +1,9 @@
 <h1>Celebrities</h1>
-{{#each celebrities}}
-<p><a href="/celebrities/{{this.id}}">{{this.name}}</a></p>
-{{/each}}
+<a class="btn btn-success mb-3" href="/celebrities/add">Add a Celebrity</a>
+<div class="row">
+  {{#each celebrities}}
+    <div class="col-6 mb-3">
+      {{>listItem this}}
+    </div>
+  {{/each}}
+</div>
